@@ -1,0 +1,67 @@
+prompt,base,finetuned
+Write a Python function to check if a string is a palindrome.,"def is_palindrome(string):
+    left_index = 0
+    right_index = len(string) - 1
+    
+    while left_index < right_index:
+        if string[left_index] != string[right_index]:
+            return False
+        left_index += 1
+        right_index -= 1
+        
+    return True
+
+print(is_palindrome(""race","def is_palindrome(string):
+    left_index = 0
+    right_index = len(string) - 1
+
+    while left_index < right_index:
+        if string[left_index] != string[right_index]:
+            return False
+        left_index += 1
+        right_index -= 1
+        
+    return True
+
+result = is_palindrome(""level"
+Create a Python script that reads a CSV file and prints the number of rows.,"import csv
+
+filename = 'data.csv'
+
+with open(filename) as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print(len(row)) # Number of columns per row. 
+
+print('Number of rows:', len(list(reader))) # Total number of rows in the file","import csv
+
+def count_rows(file_name):
+ with open(file_name, 'r') as csvfile:
+ reader = csv.reader(csvfile)
+ return sum(1 for row in reader)
+
+if __name__ == '__main__':
+ filename = 'data.csv'
+ print(count_rows(filename)) # 500"
+How to handle exceptions in Python? Provide an example.,"def divide(x, y):
+    try: 
+        return x / y
+    except ZeroDivisionError:
+        return 'You cannot divide by zero'
+
+print(divide(9, 0)) # This will raise a ZeroDivisionError and the program will print ""You cannot divide by zero"". 
+
+# To handle this exception, we can use a try/except block as ","try:
+    # some code
+except ExceptionType1 as e1:
+    print(""Exception Type 1: "" + str(e1))
+except ExceptionType2 as e2:
+    print(""Exception Type 2: "" + str(e2))"
+Write a list comprehension to square all even numbers from 1 to 10.,"numbers = [x**2 for x in range(1, 11) if x % 2 == 0]
+print(numbers)
+# Output: [4, 16, 36, 64, 100]","even_squares = [x**2 for x in range(1, 11) if x % 2 == 0]
+print(even_squares)
+# Output: [4, 16, 36, 64, 100]"
+Explain the difference between a list and a tuple in Python.,"A List is an ordered collection of items that can be modified, whereas a Tuple is also an ordered collection of items but it cannot be modified after creation. In other words, once a List is created, its elements can be added, removed or changed, while for a Tuple, you cannot change the values after","In Python, both lists and tuples are used to store collections of items. However, there is one key difference between them: mutability.
+
+A list is mutable, which means that you can change its contents after it has been created. You can add or remove elements from a list at any time. Lists are repres"
